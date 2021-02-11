@@ -1,0 +1,69 @@
+package com.openshift.cloud.v1alpha.models;
+
+public class ManagedKafkaCondition {
+  public enum Type {
+    AcccesTokenSecretAvailable,
+    UserKafkasUpToDate,
+    ServiceAccountCreated,
+    ServiceAccountSecretCreated,
+    Finished,
+    FoundKafkaById;
+  }
+
+  public enum Status {
+    True,
+    False,
+    Unknown
+  }
+
+  private Type type;
+  private String reason;
+  private String message;
+  private Status status;
+  private String lastTransitionTime;
+
+  public String getType() {
+    return type.name();
+  }
+
+  public String getReason() {
+    return reason;
+  }
+
+  public String getMessage() {
+    return message;
+  }
+
+  public String getStatus() {
+    return status.name();
+  }
+
+  public String getLastTransitionTime() {
+    return lastTransitionTime;
+  }
+
+  public ManagedKafkaCondition setType(String type) {
+    this.type = Type.valueOf(type);
+    return this;
+  }
+
+  public ManagedKafkaCondition setReason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+
+  public ManagedKafkaCondition setMessage(String message) {
+    this.message = message;
+    return this;
+  }
+
+  public ManagedKafkaCondition setStatus(String status) {
+    this.status = Status.valueOf(status);
+    return this;
+  }
+
+  public ManagedKafkaCondition setLastTransitionTime(String lastTransitionTime) {
+    this.lastTransitionTime = lastTransitionTime;
+    return this;
+  }
+}

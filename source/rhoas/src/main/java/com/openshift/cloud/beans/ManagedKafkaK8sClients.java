@@ -144,8 +144,8 @@ public final class ManagedKafkaK8sClients {
       client.apiextensions().v1beta1().customResourceDefinitions().create(mkcCrd);
       LOG.info("ManagedKafkaConnection CRD Created");
     } else {
-      LOG.info("Found ManagedKafkaConnection CRD");
       mkcCrd = mkcCrdOptional.get();
+      LOG.info("Found ManagedKafkaConnection CRD");
     }
 
     return mkcCrd;
@@ -173,8 +173,14 @@ public final class ManagedKafkaK8sClients {
       client.apiextensions().v1beta1().customResourceDefinitions().create(mkcCrd);
       LOG.info("ManagedKafkaRequest CRD Created");
     } else {
-      LOG.info("Found ManagedKafkaRequest CRD");
       mkcCrd = mkcCrdOptional.get();
+      LOG.info(
+          "Found ManagedKafkaRequest CRD "
+              + mkcCrd.getSpec().getGroup()
+              + " "
+              + mkcCrd.getSpec().getVersion()
+              + " "
+              + mkcCrd.getSpec().getNames().getKind());
     }
 
     return mkcCrd;
