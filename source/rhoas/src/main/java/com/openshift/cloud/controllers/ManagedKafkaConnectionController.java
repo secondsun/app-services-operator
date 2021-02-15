@@ -44,8 +44,7 @@ public class ManagedKafkaConnectionController
           resource.getSpec().getCredentials().getServiceAccountSecretName();
       var namespace = resource.getMetadata().getNamespace();
 
-      String accessToken =
-          accessToken = accessTokenSecretTool.getAccessToken(accessTokenSecretName, namespace);
+      String accessToken = accessTokenSecretTool.getAccessToken(accessTokenSecretName, namespace);
 
       var kafkaServiceInfo = apiClient.getKafkaById(kafkaId, accessToken);
 
@@ -65,7 +64,7 @@ public class ManagedKafkaConnectionController
       LOG.log(Level.SEVERE, "Setting condition for exception " + e.getReason(), e);
       ConditionUtil.setConditionFromException(resource.getStatus().getConditions(), e);
     }
-    return UpdateControl.updateStatusSubResource(resource);
+    return UpdateControl.updateCustomResourceAndStatus(resource);
   }
 
   /**

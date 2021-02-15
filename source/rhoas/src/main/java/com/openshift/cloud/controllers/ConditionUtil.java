@@ -83,7 +83,7 @@ public class ConditionUtil {
               .withConditions(managedKafkaServiceAccountRequestDefaultConditions())
               .build());
     } else {
-      status.setConditions(managedKafkaRequestDefaultConditions());
+      status.setConditions(managedKafkaServiceAccountRequestDefaultConditions());
     }
   }
 
@@ -160,7 +160,12 @@ public class ConditionUtil {
   }
 
   public static boolean allTrue(List<ManagedKafkaCondition> conditions) {
+    if (conditions == null) {
+      return false;
+    }
+
     AtomicBoolean allTrue = new AtomicBoolean(true);
+
     for (var cond : conditions) {
       if (!True.name().equalsIgnoreCase(cond.getStatus())) {
         allTrue.set(false);

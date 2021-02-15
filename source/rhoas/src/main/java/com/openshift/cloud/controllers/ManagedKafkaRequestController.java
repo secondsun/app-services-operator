@@ -1,6 +1,5 @@
 package com.openshift.cloud.controllers;
 
-import com.openshift.cloud.ApiException;
 import com.openshift.cloud.beans.AccessTokenSecretTool;
 import com.openshift.cloud.beans.ManagedKafkaApiClient;
 import com.openshift.cloud.beans.ManagedKafkaK8sClients;
@@ -9,6 +8,7 @@ import com.openshift.cloud.v1alpha.models.UserKafka;
 import io.javaoperatorsdk.operator.api.*;
 import io.javaoperatorsdk.operator.api.config.ControllerConfiguration;
 import io.javaoperatorsdk.operator.processing.event.EventSourceManager;
+import io.javaoperatorsdk.operator.processing.event.internal.CustomResourceEvent;
 import io.quarkus.scheduler.Scheduled;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -39,27 +39,18 @@ public class ManagedKafkaRequestController implements ResourceController<Managed
   @Override
   public UpdateControl<ManagedKafkaRequest> createOrUpdateResource(
       ManagedKafkaRequest resource, Context<ManagedKafkaRequest> context) {
-
-    LOG.info(String.format("Update or create resource %s", resource.getMetadata().getName()));
-
-    try {
-      updateManagedKafkaRequest(resource);
-      var mkClient = managedKafkaClientFactory.managedKafkaRequest();
-      mkClient.inNamespace(resource.getMetadata().getNamespace()).updateStatus(resource);
-
-      return UpdateControl.noUpdate();
-    } catch (ApiException e) {
-      e.printStackTrace();
-    }
-    return UpdateControl.noUpdate();
+    
+        LOG.info(String.format("Update or create resource %s", resource.getMetadata().getName()));
+    
+    updateManagedKafkaRequest(resource);
+    return UpdateControl.updateStatusSubResource(resource);
+  
   }
-
   /**
    * @param resource the resource to check for new kafkas
    * @return true if there were changes, false otherwise
-   * @throws ApiException if something goes wrong connecting to services
    */
-  private boolean updateManagedKafkaRequest(ManagedKafkaRequest resource) throws ApiException {
+  private boolean updateManagedKafkaRequest(ManagedKafkaRequest resource) {
 
     ConditionUtil.initializeConditions(resource);
     try {
@@ -112,22 +103,19 @@ public class ManagedKafkaRequestController implements ResourceController<Managed
     var mkClient = managedKafkaClientFactory.managedKafkaRequest();
     var items = mkClient.inAnyNamespace().list().getItems();
     LOG.info("Items to refresh" + items.size());
-    items.forEach(
-        resource -> {
-          try {
-
-            // If there are untrue conditions, always update the status
-            boolean allTrue = ConditionUtil.allTrue(resource.getStatus().getConditions());
-            boolean hasUpdates = updateManagedKafkaRequest(resource);
-            if (!allTrue || hasUpdates) {
-              mkClient.inNamespace(resource.getMetadata().getNamespace()).updateStatus(resource);
+    items.stream()
+        .filter(item -> item.getStatus() != null)
+        .forEach(
+            resource -> {
               LOG.info("refreshed kafka" + resource.getMetadata().getName());
-            }
-
-          } catch (ApiException e) {
-            e.printStackTrace();
-          }
-        });
+              // If there are untrue conditions, always update the status
+              boolean allTrue = ConditionUtil.allTrue(resource.getStatus().getConditions());
+              boolean hasUpdates = updateManagedKafkaRequest(resource);
+              if (!allTrue || hasUpdates) {
+                mkClient.inNamespace(resource.getMetadata().getNamespace()).updateStatus(resource);
+                LOG.info("refreshed kafka" + resource.getMetadata().getName());
+              }
+            });
   }
 
   @Override
