@@ -3,9 +3,8 @@ package com.openshift.cloud.controllers;
 import static com.openshift.cloud.v1alpha.models.ManagedKafkaCondition.Status.True;
 
 import com.openshift.cloud.v1alpha.models.*;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
+
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -72,7 +71,7 @@ public class ConditionUtil {
   }
 
   private static String isoNow() {
-    return ZonedDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ISO_INSTANT);
+    return Instant.now().toString();
   }
 
   public static void initializeConditions(ManagedServiceAccountRequest resource) {
