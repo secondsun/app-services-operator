@@ -3,7 +3,6 @@ package com.openshift.cloud.controllers;
 import static com.openshift.cloud.v1alpha.models.ManagedKafkaCondition.Status.True;
 
 import com.openshift.cloud.v1alpha.models.*;
-
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,21 +25,22 @@ public class ConditionUtil {
   }
 
   private static List<ManagedKafkaCondition> managedKafkaRequestDefaultConditions() {
+    var now = isoNow();
     return List.of(
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+            .setLastTransitionTime(now)
             .setType(ManagedKafkaCondition.Type.AcccesTokenSecretAvailable.name())
             .setReason("")
             .setMessage("")
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+            .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.Finished.name())
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+            .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.UserKafkasUpToDate.name())
@@ -87,27 +87,28 @@ public class ConditionUtil {
   }
 
   private static List<ManagedKafkaCondition> managedKafkaServiceAccountRequestDefaultConditions() {
+    var now = isoNow();
     return List.of(
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+            .setLastTransitionTime(now)
             .setType(ManagedKafkaCondition.Type.AcccesTokenSecretAvailable.name())
             .setReason("")
             .setMessage("")
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.ServiceAccountCreated.name())
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.ServiceAccountSecretCreated.name())
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.Finished.name())
@@ -137,21 +138,22 @@ public class ConditionUtil {
   }
 
   private static List<ManagedKafkaCondition> managedKafkaConnectionDefaultConditions() {
+    var now = isoNow();
     return List.of(
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setType(ManagedKafkaCondition.Type.AcccesTokenSecretAvailable.name())
             .setReason("")
             .setMessage("")
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setType(ManagedKafkaCondition.Type.FoundKafkaById.name())
             .setReason("")
             .setMessage("")
             .setStatus(ManagedKafkaCondition.Status.Unknown.name()),
         new ManagedKafkaCondition()
-            .setLastTransitionTime(isoNow())
+                .setLastTransitionTime(now)
             .setReason("")
             .setMessage("")
             .setType(ManagedKafkaCondition.Type.Finished.name())

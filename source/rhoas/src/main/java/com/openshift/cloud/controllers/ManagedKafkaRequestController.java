@@ -8,7 +8,6 @@ import com.openshift.cloud.v1alpha.models.UserKafka;
 import io.javaoperatorsdk.operator.api.*;
 import io.javaoperatorsdk.operator.api.config.ControllerConfiguration;
 import io.javaoperatorsdk.operator.processing.event.EventSourceManager;
-import io.javaoperatorsdk.operator.processing.event.internal.CustomResourceEvent;
 import io.quarkus.scheduler.Scheduled;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -39,12 +38,11 @@ public class ManagedKafkaRequestController implements ResourceController<Managed
   @Override
   public UpdateControl<ManagedKafkaRequest> createOrUpdateResource(
       ManagedKafkaRequest resource, Context<ManagedKafkaRequest> context) {
-    
-        LOG.info(String.format("Update or create resource %s", resource.getMetadata().getName()));
-    
+
+    LOG.info(String.format("Update or create resource %s", resource.getMetadata().getName()));
+
     updateManagedKafkaRequest(resource);
     return UpdateControl.updateStatusSubResource(resource);
-  
   }
   /**
    * @param resource the resource to check for new kafkas
