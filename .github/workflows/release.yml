@@ -32,7 +32,7 @@ jobs:
       with:
         java-version: 11
     - name: Build and run Unit tests
-      run: mvn install --file pom.xml --no-transfer-progress -Dquarkus.container-image.username=${{ secrets.quay_robotaccount }} -Dquarkus.container-image.password=${{ secrets.quay_robottoken }} -Dquarkus.container-image.build=true -Dquarkus.container-image.tag=${{ steps.version-number.outputs.version }} -Dquarkus.container-image.push=true -Dquarkus.container-image.username=${{ secrets.quay_robotaccount}} -Dquarkus.container-image.password=${{ secrets.quay_robottoken}} -Dquarkus.container-image.group=${{ steps.quay-organization.outputs.name }}
+      run: mvn install --file pom.xml --no-transfer-progress -Dquarkus.container-image.username=${{ secrets.quay_robotaccount }} -Dquarkus.container-image.password=${{ secrets.quay_robottoken }} -Dquarkus.container-image.build=true -Dquarkus.container-image.tag=${{ steps.version-number.outputs.version }} -Dquarkus.container-image.push=true -Dquarkus.container-image.username=${{ secrets.quay_robotaccount}} -Dquarkus.container-image.password=${{ secrets.quay_robottoken}} -Dquarkus.container-image.group=${{ steps.quay-organization.outputs.name }} -Dquarkus.arc.selected-alternatives=com.openshift.cloud.beans.MockKafkaApiClient,com.openshift.cloud.beans.MockAccessTokenSecretTool
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
