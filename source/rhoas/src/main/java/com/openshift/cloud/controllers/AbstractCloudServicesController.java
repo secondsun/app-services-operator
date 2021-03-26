@@ -46,9 +46,9 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
         sealedSetErrorConditions(resource, e);
       } catch (Throwable t) {
         LOG.log(Level.SEVERE, t.getMessage(), t);
-
         KafkaCondition finished = getSealedErrorCondition(resource, Type.Finished);
         finished.setReason(t.getClass().getName());
+
         finished.setMessage(t.getMessage());
         finished.setStatus(Status.False);
       }
