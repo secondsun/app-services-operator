@@ -1,0 +1,6 @@
+apiVersion: rhoas.redhat.com/v1alpha1
+kind: CloudServicesRequest
+metadata:
+  name: test-{{number}}
+spec:
+  accessTokenSecretName: rh-managed-services-api-accesstoken
