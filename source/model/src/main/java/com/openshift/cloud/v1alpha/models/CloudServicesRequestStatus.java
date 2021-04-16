@@ -3,6 +3,9 @@ package com.openshift.cloud.v1alpha.models;
 import io.sundr.builder.annotations.Buildable;
 import java.util.List;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Buildable(builderPackage = "io.fabric8.kubernetes.api.builder", editableEnabled = false)
 public class CloudServicesRequestStatus {
 
@@ -46,4 +49,15 @@ public class CloudServicesRequestStatus {
   public void setConditions(List<KafkaCondition> conditions) {
     this.conditions = conditions;
   }
+
+  @Override
+  public String toString() {
+    try {
+      return new ObjectMapper().writeValueAsString(this);
+    } catch (JsonProcessingException e) {
+      e.printStackTrace();
+      return "error";
+    }
+  }
+
 }
