@@ -30,6 +30,10 @@
       <version>${quarkus.operator.sdk.version}</version>
     </dependency>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-scheduler</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.openshift.cloud</groupId>
       <artifactId>managed-services-api</artifactId>
       <version>${project.version}</version>
