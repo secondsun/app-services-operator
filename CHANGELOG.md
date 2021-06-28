@@ -1,14 +1,6 @@
 
-<a name="0.7.5"></a>
-## [0.7.5](https://github.com/redhat-developer/app-services-operator/compare/0.7.4...0.7.5) (2021-06-16)
-
-
-<a name="0.7.4"></a>
-## [0.7.4](https://github.com/redhat-developer/app-services-operator/compare/0.7.3...0.7.4) (2021-06-14)
-
-
-<a name="0.7.3"></a>
-## [0.7.3](https://github.com/redhat-developer/app-services-operator/compare/0.7.2...0.7.3) (2021-06-07)
+<a name="0.9.4"></a>
+## [0.9.4](https://github.com/redhat-developer/app-services-operator/compare/0.9.3...0.9.4) (2021-06-28)
 
 ### Bug Fixes
 
@@ -16,18 +8,6 @@
 * Remove invalid workflow
 * add website build
 * add missing README to quickstarts
-
-### Documentation
-
-* Updates to Operator installation procedure ([#221](https://github.com/redhat-developer/app-services-operator/issues/221))
-* Added quick starts initially created for dev sandbox to the operator, so they will be automatically installed on any OpenShift instance on which the rhoas operator is installed. ([#215](https://github.com/redhat-developer/app-services-operator/issues/215))
-
-
-<a name="0.7.2"></a>
-## [0.7.2](https://github.com/redhat-developer/app-services-operator/compare/0.7.1...0.7.2) (2021-05-04)
-
-### Bug Fixes
-
 * change extensively long operator name ([#209](https://github.com/redhat-developer/app-services-operator/issues/209))
 * update open api spec ([#206](https://github.com/redhat-developer/app-services-operator/issues/206))
 * name of the project and general information
@@ -36,27 +16,24 @@
 * update readme with shorter into
 * push tags for release process
 * update to trigger builds only on release
-
-
-<a name="0.7.1"></a>
-## [0.7.1](https://github.com/redhat-developer/app-services-operator/compare/0.7.0...0.7.1) (2021-04-21)
-
-### Bug Fixes
-
 * add logging capability to tell us what env is used by operator
 * add explicit env variable pointing to the environment
-
-
-<a name="0.7.0"></a>
-## [0.7.0](https://github.com/redhat-developer/app-services-operator/compare/0.6.9...0.7.0) (2021-04-21)
-
-### Bug Fixes
-
 * update default url to production ([#178](https://github.com/redhat-developer/app-services-operator/issues/178))
 
+### Documentation
 
-<a name="0.6.9"></a>
-## [0.6.9](https://github.com/redhat-developer/app-services-operator/compare/0.6.8...0.6.9) (2021-04-21)
+* Updates to Operator installation procedure ([#221](https://github.com/redhat-developer/app-services-operator/issues/221))
+* Added quick starts initially created for dev sandbox to the operator, so they will be automatically installed on any OpenShift instance on which the rhoas operator is installed. ([#215](https://github.com/redhat-developer/app-services-operator/issues/215))
+
+### Features
+
+* install quickstarts on boot
+* using new api package
+* migration to app-services-sdk
+
+
+<a name="0.9.3"></a>
+## [0.9.3](https://github.com/redhat-developer/app-services-operator/compare/0.9.0...0.9.3) (2021-04-20)
 
 ### Bug Fixes
 
@@ -66,11 +43,32 @@
 * add information to description about limited beta
 
 
-<a name="0.6.8"></a>
-## [0.6.8](https://github.com/redhat-developer/app-services-operator/compare/0.6.7...0.6.8) (2021-04-15)
+<a name="0.9.0"></a>
+## [0.9.0](https://github.com/redhat-developer/app-services-operator/compare/0.9.1...0.9.0) (2021-04-19)
+
+
+<a name="0.9.1"></a>
+## [0.9.1](https://github.com/redhat-developer/app-services-operator/compare/0.8.2...0.9.1) (2021-04-19)
+
+
+<a name="0.8.2"></a>
+## [0.8.2](https://github.com/redhat-developer/app-services-operator/compare/0.8.1...0.8.2) (2021-04-16)
+
+
+<a name="0.8.1"></a>
+## [0.8.1](https://github.com/redhat-developer/app-services-operator/compare/0.8.0...0.8.1) (2021-04-16)
 
 ### Bug Fixes
 
+* applying to other classes
+
+
+<a name="0.8.0"></a>
+## [0.8.0](https://github.com/redhat-developer/app-services-operator/compare/0.6.7...0.8.0) (2021-04-16)
+
+### Bug Fixes
+
+* hack remove later
 * improve error handling to include message from server
 
 
@@ -194,15 +192,7 @@
 
 
 <a name="0.3.0"></a>
-## [0.3.0](https://github.com/redhat-developer/app-services-operator/compare/0.2.4...0.3.0) (2021-03-11)
-
-
-<a name="0.2.4"></a>
-## [0.2.4](https://github.com/redhat-developer/app-services-operator/compare/0.2.5...0.2.4) (2021-03-11)
-
-
-<a name="0.2.5"></a>
-## [0.2.5](https://github.com/redhat-developer/app-services-operator/compare/0.2.1...0.2.5) (2021-03-11)
+## [0.3.0](https://github.com/redhat-developer/app-services-operator/compare/0.2.1...0.3.0) (2021-03-11)
 
 ### BREAKING CHANGES
 
