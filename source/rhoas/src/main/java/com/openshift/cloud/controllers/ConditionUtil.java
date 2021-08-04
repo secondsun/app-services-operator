@@ -6,6 +6,7 @@ import static com.openshift.cloud.v1alpha.models.KafkaCondition.Status.True;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openshift.cloud.api.kas.invoker.ApiException;
+import com.openshift.cloud.utils.AppServicesApiException;
 import com.openshift.cloud.utils.InvalidUserInputException;
 import com.openshift.cloud.v1alpha.models.*;
 import com.openshift.cloud.v1alpha.models.KafkaCondition.Status;
@@ -190,13 +191,34 @@ public class ConditionUtil {
             .setStatus(Status.Unknown));
   }
 
+  
+  /**
+   * Convience method for getStandarizedErrorMessage(AppServicesApiException e)
+   * 
+   * @param e exception using APIException object
+   * @return a human readable String to be set as the message property of a failed condition
+   */
+  public static String getStandarizedErrorMessage(ApiException e) {
+    return getStandarizedErrorMessage(new AppServicesApiException(e));
+  }
+
+  /**
+   * Convience method for getStandarizedErrorMessage(AppServicesApiException e)
+   * 
+   * @param e exception using APIException object
+   * @return a human readable String to be set as the message property of a failed condition
+   */
+  public static String getStandarizedErrorMessage(com.openshift.cloud.api.srs.invoker.ApiException e) {
+    return getStandarizedErrorMessage(new AppServicesApiException(e));
+  }
+
   /**
    * Map the api exception to proper error
    *
    * @param e exception using APIException object
    * @return a human readable String to be set as the message property of a failed condition
    */
-  public static String getStandarizedErrorMessage(ApiException e) {
+  public static String getStandarizedErrorMessage(AppServicesApiException e) {
     var statusCode = e.getCode();
     var reason = "";
     var errorObject = new HashMap<String, Object>();

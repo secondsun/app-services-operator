@@ -4,14 +4,15 @@ import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 import com.openshift.cloud.v1alpha.models.KafkaCondition;
-import com.openshift.cloud.api.ApiClient;
-import com.openshift.cloud.api.ApiException;
-import com.openshift.cloud.api.Configuration;
 import com.openshift.cloud.api.srs.RegistriesApi;
-import com.openshift.cloud.api.srs.models.Registry;
+import com.openshift.cloud.api.srs.invoker.ApiClient;
+import com.openshift.cloud.api.srs.invoker.ApiException;
+import com.openshift.cloud.api.srs.invoker.Configuration;
+import com.openshift.cloud.api.srs.invoker.auth.HttpBearerAuth;
+import com.openshift.cloud.api.srs.models.RegistryRest;
 import com.openshift.cloud.controllers.ConditionAwareException;
 import com.openshift.cloud.controllers.ConditionUtil;
-import com.openshift.cloud.api.auth.HttpBearerAuth;
+
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
@@ -33,9 +34,9 @@ public class ServiceRegistryApiClient {
     return new RegistriesApi(defaultClient);
   }
 
-  public List<Registry> listRegistries(String accessToken) throws ConditionAwareException {
+  public List<RegistryRest> listRegistries(String accessToken) throws ConditionAwareException {
     try {
-      return createRegistriesClient(accessToken).getRegistries();
+      return createRegistriesClient(accessToken).getRegistries(null,null,null, null).getItems();
     } catch (ApiException e) {
       String message = ConditionUtil.getStandarizedErrorMessage(e);
       throw new ConditionAwareException(message, e, KafkaCondition.Type.ServiceRegistriesUpToDate,
@@ -44,7 +45,7 @@ public class ServiceRegistryApiClient {
 
   }
 
-public Registry getServiceRegistryById(Integer registryId, String accessToken)  throws ConditionAwareException {
+public RegistryRest getServiceRegistryById(String registryId, String accessToken)  throws ConditionAwareException {
   try {
     return createRegistriesClient(accessToken).getRegistry(registryId);
   } catch (ApiException e) {
