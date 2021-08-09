@@ -11,6 +11,8 @@ import io.javaoperatorsdk.operator.api.Context;
 import io.javaoperatorsdk.operator.api.DeleteControl;
 import io.javaoperatorsdk.operator.api.ResourceController;
 import io.javaoperatorsdk.operator.api.UpdateControl;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,6 +37,9 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
   /** This method is overriden by the proxies, but should not be overriden by you, the developer. */
   public UpdateControl<T> createOrUpdateResource(T resource, Context<T> context) {
     LOG.info("Updating resource " + resource.getCRDName());
+    if (requiresLabelUpdate(resource)) {
+      return UpdateControl.updateCustomResource(resource);      
+    }
     if (shouldProcess(resource)) {
       sealedInitializeConditions(resource);
       try {
@@ -57,6 +62,26 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
     } else {
       return UpdateControl.noUpdate();
     }
+  }
+
+  private boolean requiresLabelUpdate(T resource) {
+    var updateRequired = false;
+    if (resource instanceof KafkaConnection) {
+      var labels = resource.getMetadata().getLabels();
+      
+      if (labels == null) {
+        resource.getMetadata().setLabels(labels =  new HashMap());
+      }
+
+      updateRequired = labels.containsKey("app.kubernetes.io/component") && labels.containsKey("app.kubernetes.io/managed-by");
+
+      if (updateRequired) {
+        labels.put("app.kubernetes.io/component", "external-service");
+        labels.put("app.kubernetes.io/managed-by", "rhoas");
+      }
+
+    }
+    return updateRequired;
   }
 
   /**
