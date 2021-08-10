@@ -37,10 +37,9 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
   /** This method is overriden by the proxies, but should not be overriden by you, the developer. */
   public UpdateControl<T> createOrUpdateResource(T resource, Context<T> context) {
     LOG.info("Updating resource " + resource.getCRDName());
-    if (requiresLabelUpdate(resource)) {
-      return UpdateControl.updateCustomResource(resource);      
-    }
+
     if (shouldProcess(resource)) {
+      var updateLabels = requiresLabelUpdate(resource);
       sealedInitializeConditions(resource);
       try {
 
@@ -57,8 +56,11 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
         finished.setMessage(t.getMessage());
         finished.setStatus(Status.False);
       }
-
-      return UpdateControl.updateStatusSubResource(resource);
+      if (!updateLabels) {
+        return UpdateControl.updateStatusSubResource(resource);
+      } else {
+        return UpdateControl.updateCustomResourceAndStatus(resource);
+      }
     } else {
       return UpdateControl.noUpdate();
     }
@@ -68,12 +70,13 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
     var updateRequired = false;
     if (resource instanceof KafkaConnection) {
       var labels = resource.getMetadata().getLabels();
-      
+
       if (labels == null) {
-        resource.getMetadata().setLabels(labels =  new HashMap());
+        resource.getMetadata().setLabels(labels = new HashMap());
       }
 
-      updateRequired = !(labels.containsKey("app.kubernetes.io/component") && labels.containsKey("app.kubernetes.io/managed-by"));
+      updateRequired = !(labels.containsKey("app.kubernetes.io/component")
+          && labels.containsKey("app.kubernetes.io/managed-by"));
 
       if (updateRequired) {
         labels.put("app.kubernetes.io/component", "external-service");
