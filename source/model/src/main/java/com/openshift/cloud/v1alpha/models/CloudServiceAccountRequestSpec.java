@@ -11,9 +11,18 @@ public class CloudServiceAccountRequestSpec {
   private String serviceAccountDescription;
   private String serviceAccountSecretName;
   private String accessTokenSecretName = "rhoas_binding_operator_token";
+  private String aclRole;
 
   /** No args constructor for use in serialization */
   public CloudServiceAccountRequestSpec() {}
+
+  public String getAclRole() {
+    return aclRole;
+  }
+
+  public void setAclRole(String aclRole) {
+    this.aclRole = aclRole;
+  }
 
   public String getAccessTokenSecretName() {
     return accessTokenSecretName;
