@@ -13,7 +13,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @Plural("cloudserviceaccountrequests")
 @Group("rhoas.redhat.com")
-@Version("v1alpha1")
+@Version("v1alpha2")
 @Buildable(builderPackage = "io.fabric8.kubernetes.api.builder", editableEnabled = false,
     refs = @BuildableReference(CustomResource.class))
 public class CloudServiceAccountRequest

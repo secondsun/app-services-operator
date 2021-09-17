@@ -21,7 +21,7 @@ spec:
       displayName: Cloud Service Account Request
       kind: CloudServiceAccountRequest
       name: cloudserviceaccountrequests.rhoas.redhat.com
-      version: v1alpha1
+      version: v1alpha2
     - description: Cloud Services Request
       displayName:  Cloud Services Request
       kind: CloudServicesRequest
