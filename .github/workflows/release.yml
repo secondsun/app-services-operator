@@ -38,7 +38,7 @@ jobs:
         server-username: CI_USER  # env variable name for username
         server-password: CI_PASSWORD # env variable name for GitHub Personal Access Token
     - name: Build and run Unit tests
-      run: mvn install --file pom.xml --no-transfer-progress -Dquarkus.container-image.username=${{ secrets.quay_robotaccount }} -Dquarkus.container-image.password=${{ secrets.quay_robottoken }} -Dquarkus.container-image.build=true -Dquarkus.container-image.tag=${{ steps.version-number.outputs.version }} -Dquarkus.container-image.push=true -Dquarkus.container-image.username=${{ secrets.quay_robotaccount}} -Dquarkus.container-image.password=${{ secrets.quay_robottoken}} -Dquarkus.container-image.group=${{ steps.quay-organization.outputs.name }}
+      run: mvn install -Pnative --file pom.xml --no-transfer-progress -Dquarkus.container-image.username=${{ secrets.quay_robotaccount }} -Dquarkus.container-image.password=${{ secrets.quay_robottoken }} -Dquarkus.container-image.build=true -Dquarkus.container-image.tag=${{ steps.version-number.outputs.version }} -Dquarkus.container-image.push=true -Dquarkus.container-image.username=${{ secrets.quay_robotaccount}} -Dquarkus.container-image.password=${{ secrets.quay_robottoken}} -Dquarkus.container-image.group=${{ steps.quay-organization.outputs.name }}
       env: 
         CI_USER: ${{ secrets.CI_USER }}
         CI_PASSWORD: ${{ secrets.CI_PASSWORD }}

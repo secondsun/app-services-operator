@@ -23,7 +23,7 @@ jobs:
     - name: Enforce Formatting
       run: mvn formatter:validate
     - name: Build and run Unit tests
-      run: mvn package --file pom.xml --no-transfer-progress
+      run: mvn package  -Pnative --file pom.xml --no-transfer-progress
       env:
         CI_USER: ${{ secrets.CI_USER }}
         CI_PASSWORD: ${{ secrets.CI_PASSWORD }}
