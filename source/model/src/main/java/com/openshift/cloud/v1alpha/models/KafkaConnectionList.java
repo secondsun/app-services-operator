@@ -1,8 +1,10 @@
 package com.openshift.cloud.v1alpha.models;
 
 import io.fabric8.kubernetes.client.CustomResourceList;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /** required for using Fabric8 CRD support. */
+@RegisterForReflection
 public class KafkaConnectionList extends CustomResourceList<KafkaConnection> {
 
   /** Generated */

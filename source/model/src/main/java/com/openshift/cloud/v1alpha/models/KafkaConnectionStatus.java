@@ -4,7 +4,9 @@ import io.sundr.builder.annotations.Buildable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 @Buildable(builderPackage = "io.fabric8.kubernetes.api.builder", editableEnabled = false)
 public class KafkaConnectionStatus {
   private String message;

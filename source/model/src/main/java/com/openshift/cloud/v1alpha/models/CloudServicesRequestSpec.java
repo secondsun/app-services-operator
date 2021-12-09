@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CloudServicesRequestSpec {
 

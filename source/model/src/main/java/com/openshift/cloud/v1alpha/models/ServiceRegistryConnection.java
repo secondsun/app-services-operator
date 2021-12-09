@@ -8,7 +8,9 @@ import io.fabric8.kubernetes.model.annotation.Plural;
 import io.fabric8.kubernetes.model.annotation.Version;
 import io.sundr.builder.annotations.Buildable;
 import io.sundr.builder.annotations.BuildableReference;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 @Plural("serviceregistryconnections")
 @Group("rhoas.redhat.com")
 @Version("v1alpha1")

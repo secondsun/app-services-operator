@@ -30,13 +30,13 @@ import java.util.Map;
 public final class KafkaK8sClients {
 
   private static final String CONNECT_QUICKSTART =
-      "/olm/quickstarts/rhosak-openshift-connect-quickstart.yaml";
+      "olm/quickstarts/rhosak-openshift-connect-quickstart.yaml";
   private static final String GETTING_STARTED_QUICKSTART =
-      "/olm/quickstarts/rhosak-openshift-getting-started-quickstart.yaml";
+      "olm/quickstarts/rhosak-openshift-getting-started-quickstart.yaml";
   private static final String KAFKACAT_QUICKSTART =
-      "/olm/quickstarts/rhosak-openshift-kafkacat-quickstart.yaml";
+      "olm/quickstarts/rhosak-openshift-kafkacat-quickstart.yaml";
   private static final String QUARKUS_BIND_QUICKSTART =
-      "/olm/quickstarts/rhosak-openshift-quarkus-bind-quickstart.yaml";
+      "olm/quickstarts/rhosak-openshift-quarkus-bind-quickstart.yaml";
 
   private static final String[] QUICKSTARTS = {CONNECT_QUICKSTART, GETTING_STARTED_QUICKSTART,
       KAFKACAT_QUICKSTART, QUARKUS_BIND_QUICKSTART};
@@ -72,6 +72,9 @@ public final class KafkaK8sClients {
       for (String quickstartFile : QUICKSTARTS) {
         try (InputStream fileStream =
             KafkaK8sClients.class.getClassLoader().getResourceAsStream(quickstartFile)) {
+          if (fileStream == null) {
+            throw new RuntimeException(quickstartFile + " is null");
+          }
           var consoleQuickStart = quickStartClient.load(fileStream);
           var quickStartName =
               ((Map<String, Object>) consoleQuickStart.get("metadata")).get("name").toString();

@@ -1,0 +1,11 @@
+{
+    "resources": [
+      {
+        "pattern": "olm/quickstarts/.*\\.yaml$"
+      },
+      {
+        "pattern": "olm/quickstarts/.*\\.md$"
+      }
+    ]
+  }
+  

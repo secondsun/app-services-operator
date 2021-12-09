@@ -1,5 +1,7 @@
 package com.openshift.cloud.v1alpha.models;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 public class UserKafka {
 
   private String id;
