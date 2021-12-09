@@ -1,6 +1,8 @@
 package com.openshift.cloud.v1alpha.models;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 public class CloudServiceCondition {
   public enum Type {
     AcccesTokenSecretValid, UserKafkasUpToDate, ServiceRegistriesUpToDate, ServiceAccountCreated, ServiceAccountSecretCreated, Finished, FoundKafkaById, FoundServiceRegistryById;

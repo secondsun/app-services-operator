@@ -1,5 +1,8 @@
 package com.openshift.cloud.v1alpha.models;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class ServiceRegistry {
   private String id;
   private String registryStatus;

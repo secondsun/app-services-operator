@@ -2,7 +2,9 @@ package com.openshift.cloud.v1alpha.models;
 
 import io.sundr.builder.annotations.Buildable;
 import java.util.List;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 
+@RegisterForReflection
 @Buildable(builderPackage = "io.fabric8.kubernetes.api.builder", editableEnabled = false)
 public class CloudServicesRequestStatus {
 
