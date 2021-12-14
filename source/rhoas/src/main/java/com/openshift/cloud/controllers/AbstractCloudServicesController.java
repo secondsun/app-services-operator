@@ -64,7 +64,6 @@ public abstract class AbstractCloudServicesController<T extends CustomResource>
       var updateLabels = requiresLabelUpdate(resource);
       sealedInitializeConditions(resource);
       try {
-
         doCreateOrUpdateResource(resource, context);
         sealedSetAllConditionsTrue(resource);
       } catch (ConditionAwareException e) {

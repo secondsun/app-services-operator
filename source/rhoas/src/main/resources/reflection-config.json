@@ -1,0 +1,320 @@
+[
+    {
+        "name" : "com.openshift.cloud.api.kas.models.CloudProvider",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.CloudProviderList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.CloudProviderListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.CloudRegion",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.CloudRegionList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.CloudRegionListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.Error",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ErrorAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ErrorList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ErrorListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.InstantQuery",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaRequest",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaRequestAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaRequestList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaRequestListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaRequestPayload",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.KafkaUpdateRequest",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.MetricsInstantQueryList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.MetricsInstantQueryListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.MetricsRangeQueryList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.MetricsRangeQueryListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ObjectReference",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.RangeQuery",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccount",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountList",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountListAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountListItem",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountListItemAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceAccountRequest",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceStatus",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.ServiceStatusKafkas",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.Values",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.VersionMetadata",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      },
+  {
+        "name" : "com.openshift.cloud.api.kas.models.VersionMetadataAllOf",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true,
+        "allDeclaredFields" : true,
+        "allPublicFields" : true
+      }
+  
+  
+  
+  ]
