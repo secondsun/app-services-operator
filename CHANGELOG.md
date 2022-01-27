@@ -1,51 +1,135 @@
 
-<a name="0.9.5"></a>
-## [0.9.5](https://github.com/redhat-developer/app-services-operator/compare/0.9.4...0.9.5) (2021-12-10)
+<a name="0.25.0"></a>
+## [0.25.0](https://github.com/redhat-developer/app-services-operator/compare/0.24.0...0.25.0) (2022-01-27)
+
+
+<a name="0.24.0"></a>
+## [0.24.0](https://github.com/redhat-developer/app-services-operator/compare/0.22.0...0.24.0) (2022-01-27)
+
+### Bug Fixes
+
+* restore finalizers for deletion
+
+
+<a name="0.22.0"></a>
+## [0.22.0](https://github.com/redhat-developer/app-services-operator/compare/0.23.0...0.22.0) (2022-01-27)
+
+
+<a name="0.23.0"></a>
+## [0.23.0](https://github.com/redhat-developer/app-services-operator/compare/0.21.0...0.23.0) (2022-01-27)
+
+### Bug Fixes
+
+* restore finalizers for deletion
+
+
+<a name="0.21.0"></a>
+## [0.21.0](https://github.com/redhat-developer/app-services-operator/compare/0.20.0...0.21.0) (2022-01-06)
+
+### Bug Fixes
+
+* add dev preview label
+
+
+<a name="0.20.0"></a>
+## [0.20.0](https://github.com/redhat-developer/app-services-operator/compare/0.19.0...0.20.0) (2021-12-10)
 
 ### Bug Fixes
 
 * update version of log4j
 
+### Features
 
-<a name="0.9.4"></a>
-## [0.9.4](https://github.com/redhat-developer/app-services-operator/compare/0.9.3...0.9.4) (2021-12-09)
+* native?
+
+
+<a name="0.19.0"></a>
+## [0.19.0](https://github.com/redhat-developer/app-services-operator/compare/0.18.0...0.19.0) (2021-12-09)
+
+
+<a name="0.18.0"></a>
+## [0.18.0](https://github.com/redhat-developer/app-services-operator/compare/0.17.0...0.18.0) (2021-12-09)
 
 ### Bug Fixes
 
 * delete unused finalizers and cleanup deleted resources
 
 
-<a name="0.9.3"></a>
-## [0.9.3](https://github.com/redhat-developer/app-services-operator/compare/0.9.2...0.9.3) (2021-11-24)
+<a name="0.17.0"></a>
+## [0.17.0](https://github.com/redhat-developer/app-services-operator/compare/0.16.0...0.17.0) (2021-12-08)
 
 ### Bug Fixes
 
 * changing srs service bindings to use only token endpoint
 
+### Features
 
-<a name="0.9.2"></a>
-## [0.9.2](https://github.com/redhat-developer/app-services-operator/compare/0.9.1...0.9.2) (2021-11-10)
+* native?
+
+
+<a name="0.16.0"></a>
+## [0.16.0](https://github.com/redhat-developer/app-services-operator/compare/0.15.0...0.16.0) (2021-11-23)
 
 ### Bug Fixes
 
+* changing srs service bindings to use only token endpoint
 * fixing registry url path
 * fix default identity url
 * realm property should be oauthRealm for binding
 * dev documenation for operator
 
 
-<a name="0.9.1"></a>
-## [0.9.1](https://github.com/redhat-developer/app-services-operator/compare/0.9.0...0.9.1) (2021-11-05)
+<a name="0.15.0"></a>
+## [0.15.0](https://github.com/redhat-developer/app-services-operator/compare/0.14.0...0.15.0) (2021-11-11)
 
 ### Bug Fixes
 
+* fixing registry url path
+
+
+<a name="0.14.0"></a>
+## [0.14.0](https://github.com/redhat-developer/app-services-operator/compare/0.13.0...0.14.0) (2021-11-11)
+
+### Bug Fixes
+
+* fix default identity url
+
+
+<a name="0.13.0"></a>
+## [0.13.0](https://github.com/redhat-developer/app-services-operator/compare/0.12.0...0.13.0) (2021-11-11)
+
+### Bug Fixes
+
+* fix default identity url
+
+
+<a name="0.12.0"></a>
+## [0.12.0](https://github.com/redhat-developer/app-services-operator/compare/0.11.0...0.12.0) (2021-11-10)
+
+### Bug Fixes
+
+* realm property should be oauthRealm for binding
 * upgrading quarkus operator sdk version
 * removing automatic finalizer creation
 * when the token can not be exchanged put the error message in the status
 
 
-<a name="0.9.0"></a>
-## [0.9.0](https://github.com/redhat-developer/app-services-operator/compare/0.8.2...0.9.0) (2021-10-18)
+<a name="0.11.0"></a>
+## [0.11.0](https://github.com/redhat-developer/app-services-operator/compare/0.10.4...0.11.0) (2021-10-25)
+
+### Bug Fixes
+
+* removing calls to v1beta1
+* minor formatting and style fixes
+* create util for managing service accounts
+* resolve registry SDK incompatibilities
+* update quarkus and other dependencies
+* add cert trust for operator
+* SBO 0.11.0 compatibility
+
+
+<a name="0.10.4"></a>
+## [0.10.4](https://github.com/redhat-developer/app-services-operator/compare/0.10.3...0.10.4) (2021-10-18)
 
 ### Bug Fixes
 
@@ -56,24 +140,39 @@
 * update quarkus and other dependencies
 
 
-<a name="0.8.2"></a>
-## [0.8.2](https://github.com/redhat-developer/app-services-operator/compare/0.8.1...0.8.2) (2021-10-16)
+<a name="0.10.3"></a>
+## [0.10.3](https://github.com/redhat-developer/app-services-operator/compare/0.10.2...0.10.3) (2021-10-18)
 
 ### Bug Fixes
 
+* minor formatting and style fixes
+* create util for managing service accounts
+* resolve registry SDK incompatibilities
+* update quarkus and other dependencies
 * add cert trust for operator
-
-
-<a name="0.8.1"></a>
-## [0.8.1](https://github.com/redhat-developer/app-services-operator/compare/0.8.0...0.8.1) (2021-10-15)
-
-### Bug Fixes
-
 * SBO 0.11.0 compatibility
+* permissions for sbo
+* removing direction
+* fixing binding
+* moving direction to status.metadata
+* adding direction to serviceregistryconnection
+* service registry id is a string
+* service binding tweaks
+* removing registryDeploymentId
+* cloud services include Service Registry condition now
+* installing service registry
+* apdating apis and fixing tests
+
+### Features
+
+* mas oauth host, realm, and token are now configurable
+* adding service labels to serviceregistryconnection
+* initial service registry connection implementation
+* schema registry added to cloud services request
 
 
-<a name="0.8.0"></a>
-## [0.8.0](https://github.com/redhat-developer/app-services-operator/compare/0.7.10...0.8.0) (2021-10-12)
+<a name="0.10.2"></a>
+## [0.10.2](https://github.com/redhat-developer/app-services-operator/compare/0.10.0...0.10.2) (2021-10-11)
 
 ### Bug Fixes
 
@@ -97,27 +196,122 @@
 * schema registry added to cloud services request
 
 
-<a name="0.7.10"></a>
-## [0.7.10](https://github.com/redhat-developer/app-services-operator/compare/0.7.9...0.7.10) (2021-09-17)
+<a name="0.10.0"></a>
+## [0.10.0](https://github.com/redhat-developer/app-services-operator/compare/0.10.1...0.10.0) (2021-10-11)
 
 
-<a name="0.7.9"></a>
-## [0.7.9](https://github.com/redhat-developer/app-services-operator/compare/0.7.8...0.7.9) (2021-09-07)
+<a name="0.10.1"></a>
+## [0.10.1](https://github.com/redhat-developer/app-services-operator/compare/0.9.18...0.10.1) (2021-10-11)
+
+### Bug Fixes
+
+* permissions for sbo
+* removing direction
+* fixing binding
+* moving direction to status.metadata
+* adding direction to serviceregistryconnection
+* service registry id is a string
+* service binding tweaks
+* removing registryDeploymentId
+* cloud services include Service Registry condition now
+* installing service registry
+* apdating apis and fixing tests
+
+### Features
+
+* mas oauth host, realm, and token are now configurable
+* adding service labels to serviceregistryconnection
+* initial service registry connection implementation
+* schema registry added to cloud services request
+
+
+<a name="0.9.18"></a>
+## [0.9.18](https://github.com/redhat-developer/app-services-operator/compare/0.9.17...0.9.18) (2021-09-17)
 
 ### Bug Fixes
 
 * creating string constants for KafkkaConnection labels
+
+### Features
+
+* testing versions fixup later
+* enforcing labels on KafaConnection
+* changing org names from com.openshift.cloud to cloud.redhat.com ([#255](https://github.com/redhat-developer/app-services-operator/issues/255))
+
+
+<a name="0.9.17"></a>
+## [0.9.17](https://github.com/redhat-developer/app-services-operator/compare/0.9.16...0.9.17) (2021-08-10)
+
+
+<a name="0.9.16"></a>
+## [0.9.16](https://github.com/redhat-developer/app-services-operator/compare/0.9.15...0.9.16) (2021-08-09)
+
+### Features
+
+* enforcing labels on KafaConnection
+
+
+<a name="0.9.15"></a>
+## [0.9.15](https://github.com/redhat-developer/app-services-operator/compare/0.9.13...0.9.15) (2021-08-09)
+
+
+<a name="0.9.13"></a>
+## [0.9.13](https://github.com/redhat-developer/app-services-operator/compare/0.9.12...0.9.13) (2021-08-09)
+
+### Features
+
+* enforcing labels on KafaConnection
+
+
+<a name="0.9.12"></a>
+## [0.9.12](https://github.com/redhat-developer/app-services-operator/compare/0.9.10...0.9.12) (2021-08-09)
+
+### Features
+
+* enforcing labels on KafaConnection
+
+
+<a name="0.9.10"></a>
+## [0.9.10](https://github.com/redhat-developer/app-services-operator/compare/0.9.11...0.9.10) (2021-08-09)
+
+### Features
+
+* enforcing labels on KafaConnection
+
+
+<a name="0.9.11"></a>
+## [0.9.11](https://github.com/redhat-developer/app-services-operator/compare/0.9.14...0.9.11) (2021-08-09)
+
+### Features
+
+* enforcing labels on KafaConnection
+
+
+<a name="0.9.14"></a>
+## [0.9.14](https://github.com/redhat-developer/app-services-operator/compare/0.9.9...0.9.14) (2021-08-09)
+
+### Bug Fixes
+
 * /s/cloud.redhat.com/console.redhat.com/g ([#249](https://github.com/redhat-developer/app-services-operator/issues/249))
 * using new operatorhub repository ([#248](https://github.com/redhat-developer/app-services-operator/issues/248))
 
 ### Features
 
 * enforcing labels on KafaConnection
-* changing org names from com.openshift.cloud to cloud.redhat.com ([#255](https://github.com/redhat-developer/app-services-operator/issues/255))
+* added new RHOSAK icons from brand to Quick Starts ([#247](https://github.com/redhat-developer/app-services-operator/issues/247))
+* new icon
 
 
-<a name="0.7.8"></a>
-## [0.7.8](https://github.com/redhat-developer/app-services-operator/compare/0.7.7...0.7.8) (2021-08-03)
+<a name="0.9.9"></a>
+## [0.9.9](https://github.com/redhat-developer/app-services-operator/compare/0.9.8...0.9.9) (2021-07-28)
+
+### Features
+
+* new icon
+
+
+<a name="0.9.8"></a>
+## [0.9.8](https://github.com/redhat-developer/app-services-operator/compare/0.9.7...0.9.8) (2021-07-28)
 
 ### Documentation
 
@@ -125,37 +319,12 @@
 
 ### Features
 
-* added new RHOSAK icons from brand to Quick Starts ([#247](https://github.com/redhat-developer/app-services-operator/issues/247))
 * new icon
-
-
-<a name="0.7.7"></a>
-## [0.7.7](https://github.com/redhat-developer/app-services-operator/compare/0.7.6...0.7.7) (2021-07-19)
-
-### Features
-
 * install quickstarts on boot
 
 
-<a name="0.7.6"></a>
-## [0.7.6](https://github.com/redhat-developer/app-services-operator/compare/0.7.5...0.7.6) (2021-06-24)
-
-### Features
-
-* using new api package
-* migration to app-services-sdk
-
-
-<a name="0.7.5"></a>
-## [0.7.5](https://github.com/redhat-developer/app-services-operator/compare/0.7.4...0.7.5) (2021-06-16)
-
-
-<a name="0.7.4"></a>
-## [0.7.4](https://github.com/redhat-developer/app-services-operator/compare/0.7.3...0.7.4) (2021-06-14)
-
-
-<a name="0.7.3"></a>
-## [0.7.3](https://github.com/redhat-developer/app-services-operator/compare/0.7.2...0.7.3) (2021-06-07)
+<a name="0.9.7"></a>
+## [0.9.7](https://github.com/redhat-developer/app-services-operator/compare/0.9.3...0.9.7) (2021-06-28)
 
 ### Bug Fixes
 
@@ -163,18 +332,6 @@
 * Remove invalid workflow
 * add website build
 * add missing README to quickstarts
-
-### Documentation
-
-* Updates to Operator installation procedure ([#221](https://github.com/redhat-developer/app-services-operator/issues/221))
-* Added quick starts initially created for dev sandbox to the operator, so they will be automatically installed on any OpenShift instance on which the rhoas operator is installed. ([#215](https://github.com/redhat-developer/app-services-operator/issues/215))
-
-
-<a name="0.7.2"></a>
-## [0.7.2](https://github.com/redhat-developer/app-services-operator/compare/0.7.1...0.7.2) (2021-05-04)
-
-### Bug Fixes
-
 * change extensively long operator name ([#209](https://github.com/redhat-developer/app-services-operator/issues/209))
 * update open api spec ([#206](https://github.com/redhat-developer/app-services-operator/issues/206))
 * name of the project and general information
@@ -183,27 +340,24 @@
 * update readme with shorter into
 * push tags for release process
 * update to trigger builds only on release
-
-
-<a name="0.7.1"></a>
-## [0.7.1](https://github.com/redhat-developer/app-services-operator/compare/0.7.0...0.7.1) (2021-04-21)
-
-### Bug Fixes
-
 * add logging capability to tell us what env is used by operator
 * add explicit env variable pointing to the environment
-
-
-<a name="0.7.0"></a>
-## [0.7.0](https://github.com/redhat-developer/app-services-operator/compare/0.6.9...0.7.0) (2021-04-21)
-
-### Bug Fixes
-
 * update default url to production ([#178](https://github.com/redhat-developer/app-services-operator/issues/178))
 
+### Documentation
 
-<a name="0.6.9"></a>
-## [0.6.9](https://github.com/redhat-developer/app-services-operator/compare/0.6.8...0.6.9) (2021-04-21)
+* Updates to Operator installation procedure ([#221](https://github.com/redhat-developer/app-services-operator/issues/221))
+* Added quick starts initially created for dev sandbox to the operator, so they will be automatically installed on any OpenShift instance on which the rhoas operator is installed. ([#215](https://github.com/redhat-developer/app-services-operator/issues/215))
+
+### Features
+
+* install quickstarts on boot
+* using new api package
+* migration to app-services-sdk
+
+
+<a name="0.9.3"></a>
+## [0.9.3](https://github.com/redhat-developer/app-services-operator/compare/0.9.1...0.9.3) (2021-04-20)
 
 ### Bug Fixes
 
@@ -213,11 +367,32 @@
 * add information to description about limited beta
 
 
-<a name="0.6.8"></a>
-## [0.6.8](https://github.com/redhat-developer/app-services-operator/compare/0.6.7...0.6.8) (2021-04-15)
+<a name="0.9.1"></a>
+## [0.9.1](https://github.com/redhat-developer/app-services-operator/compare/0.9.0...0.9.1) (2021-04-19)
+
+
+<a name="0.9.0"></a>
+## [0.9.0](https://github.com/redhat-developer/app-services-operator/compare/0.8.2...0.9.0) (2021-04-19)
+
+
+<a name="0.8.2"></a>
+## [0.8.2](https://github.com/redhat-developer/app-services-operator/compare/0.8.1...0.8.2) (2021-04-16)
+
+
+<a name="0.8.1"></a>
+## [0.8.1](https://github.com/redhat-developer/app-services-operator/compare/0.8.0...0.8.1) (2021-04-16)
 
 ### Bug Fixes
 
+* applying to other classes
+
+
+<a name="0.8.0"></a>
+## [0.8.0](https://github.com/redhat-developer/app-services-operator/compare/0.6.7...0.8.0) (2021-04-16)
+
+### Bug Fixes
+
+* hack remove later
 * improve error handling to include message from server
 
 
